@@ -87,13 +87,12 @@ body{
 }
 
 .subscribe{
-    padding-top: 3rem;
-    position: relative;
+    margin-top: 3rem;
 }
 
 
 .search_bar{
-    display: flex;
+    position: relative;
 }
 
 .search_bar input{
@@ -114,17 +113,20 @@ body{
     border: 0.1rem solid var(--Soft_Red);
 }
 
-.search_bar .icons{
+.search_bar .error_icon{
    position: absolute;
-    right: -1rem;
-    width: 15rem;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    right: 12rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
     
 }
 .search_bar .btn{
+    position: absolute;
     max-width: 10rem;
+    right: 0;
     width: 100%;
     height: 5.5rem;
     outline: none;
@@ -134,7 +136,6 @@ body{
     box-shadow: 0 1rem 2rem rgba(223, 135, 135, 0.4);
     cursor: pointer;
     transition: all 0.3s;
-    margin-left: 2rem;
 }
 .search_bar .btn:hover{
     background: linear-gradient(135deg,rgb(255, 230, 230), rgb(250, 196, 196));
@@ -143,12 +144,6 @@ body{
 .subscribe #valid_txt{
     padding: 1rem 0 0 2.5rem;
     color: var(--Soft_Red);
-    display: none;
-}
-
-.search_bar .error_icon{
-    width: 2.4rem;
-    height: 2.4rem;
     display: none;
 }
 

@@ -4,15 +4,6 @@ let errorMessage = document.getElementById("valid_txt");
 const inputBar =  document.getElementById("input_email");
 
 
-// btn.addEventListener("click", ()=>{
-//    console.log("haha");
-// });
-
-// inputBar.addEventListener("focus" , ()=>{
-//     console.log("haha");
-// });
-
-
 
 function hideValidation(){
      error_icon.style.display = "none";
@@ -21,18 +12,18 @@ function hideValidation(){
 
 
 function validation(){
-    // console.log(inputBar.value);
     if(inputBar.value == ''){
         errorMessage.innerHTML = "Please fill out email address";
         errorMessage.style.display = "block";
         error_icon.style.display = "block";
+        return false;
     }
     else{
         if(!validateEmail(inputBar.value)){
-            console.log("hah");
                 errorMessage.innerHTML = "Please provide valid email"; 
             errorMessage.style.display = "block";
             error_icon.style.display = "block";  
+            return false;
         }     
     }
 }
